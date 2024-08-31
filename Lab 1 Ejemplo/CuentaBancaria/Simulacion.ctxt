@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Simulacion
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=scanner\ cuenta1\ cuenta2\ cuenta3\ cuenta4\ cuenta5
+comment2.target=CuentaBancaria\ seleccionarCuenta(java.util.Scanner,\ CuentaBancaria,\ CuentaBancaria,\ CuentaBancaria,\ CuentaBancaria,\ CuentaBancaria)
+comment3.params=cuenta
+comment3.target=void\ mostrarInformacionCuenta(CuentaBancaria)
+comment4.params=scanner\ cuenta
+comment4.target=void\ realizarRetiroCuenta(java.util.Scanner,\ CuentaBancaria)
+numComments=5
