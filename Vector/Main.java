@@ -5,13 +5,12 @@ public class Main
         Vector vector = new Vector(numeros);
         vector.randomizeVector();
         System.out.println("Vector resultante: " + vector);
-        // Ordenamiento por seleccion
+        //vector.busquedaSecuencial(10);
+        System.out.println("Encontro el 100? " + vector.busquedaSecuencial(100));
+        vector.paresImpares();
         vector.ordenamientoSeleccion();
-        System.out.println("Vector resultante ordenado: " + vector);
-        
-        vector.busquedaSecuencial(10);
-        
-        boolean encontro = vector.busquedaBinaria(100);
-        System.out.println("Encontro el 100? " + encontro);
+        System.out.println("Vector ordenado: " + vector);
+        vector.buscarDosMenores();
+        vector.buscarDiferenciaEntreMayorYMenor();
     }
 }

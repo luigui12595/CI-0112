@@ -21,10 +21,9 @@ public class Vector
             for (int j = i + 1; j < vector.length; ++j) {
                 if (vector[j] < menor) {
                     menor = vector[j];
-                    posicionMenor = j;
+                    posicionMenor = j;      
                 }
             }
-            System.out.println(this);
             
             // Intercambiar el numero menor al principio del resto del vector
             if (posicionMenor != i) {
@@ -43,7 +42,6 @@ public class Vector
                indice = i;
                i = vector.length;
             } 
-           System.out.println("Indice = " + indice); 
         }
         
         // Otra opcion
@@ -59,7 +57,7 @@ public class Vector
         */
         return indice;
     }
-    
+
     public boolean busquedaBinaria(int valorAEncontrar) {
         return busquedaBinaria(valorAEncontrar, vector);
     }
@@ -115,5 +113,57 @@ public class Vector
             // Generate random integers in range 0 to 999
             this.vector[i] = rand.nextInt(101);
         }
+    }
+
+    public void paresImpares() {
+        int impares = 0, pares = 0;
+        
+        
+        for (int i = 0; i < this.vector.length; ++i) {
+           if (this.vector[i] % 2 == 0) {
+                pares++;
+            } else {
+                impares++;
+            }
+        }
+        
+        System.out.println("Cantidad de pares: " + pares);
+        System.out.println("Cantidad de impares: " + impares);
+    }
+    
+    public int buscarDiferenciaEntreMayorYMenor() {
+        int mayor = this.vector[0];
+        int menor = this.vector[0];
+    
+        for (int i = 1; i < this.vector.length; ++i) {
+            if (this.vector[i] > mayor) {
+                mayor = this.vector[i];
+            }
+    
+            if (this.vector[i] < menor) {
+                menor = this.vector[i];
+            }
+        }
+    
+        int diferencia = mayor - menor;
+        System.out.println("La diferencia entre el número más grande y el más pequeño es: " + diferencia);
+        return diferencia;
+    }
+
+    public void buscarDosMenores() {
+        int menor = this.vector[0];
+        int segundoMenor = Integer.MAX_VALUE;
+    
+        for (int i = 1; i < this.vector.length; ++i) {
+            if (this.vector[i] < menor) {
+                segundoMenor = menor;
+                menor = this.vector[i];
+            } else if (this.vector[i] < segundoMenor && this.vector[i] != menor) {
+                segundoMenor = this.vector[i];
+            }
+        }
+    
+        System.out.println("El número más pequeño es: " + menor);
+        System.out.println("El segundo número más pequeño es: " + segundoMenor);
     }
 }
