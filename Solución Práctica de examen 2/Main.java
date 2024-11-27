@@ -1,10 +1,10 @@
 
 // Solution for PracticaExamenII
 // Main class to interact with the user
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        /*
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Ingrese valores para el primer conjunto separados por espacio:");
@@ -37,5 +37,18 @@ public class Main {
         diferencia.imprimir();
 
         sc.close();
+        */
+
+        Analizador analizador = new Analizador();
+        int matriz[][] = {
+            {1, 2, 9},
+            {5, 3, 8},
+            {6, 7, 0}
+        };
+
+
+        analizador.identificarHileraMasLarga(matriz);
+
+
     }
 }
